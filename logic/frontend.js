@@ -13,6 +13,9 @@ function onCalculateNumberOfFlights() {
     } catch (error) {
         document.getElementById('flights').innerHTML = error; 
     } 
+    finally {
+        console.log("Number of passengers: " + passengers, ", " + "Plane capacity: " + capacity);
+    }
 }
 
 function onCalculateTotalFinalPrice(object) {
