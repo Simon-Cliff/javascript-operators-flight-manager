@@ -6,6 +6,8 @@ var passengers = require('../logic/passengers');
 function onCalculateNumberOfFlights() {
     let passengers = document.getElementById('passengers').value;
     let capacity = document.getElementById('capacity').value;
+    Util().checkInput(passengers);
+    Util().checkInput(capacity);
     try {
        let flights = Flights().calculateNumberOfFlights(passengers, capacity);
        document.getElementById('flights').innerHTML = "You will need " + flights +
